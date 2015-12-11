@@ -91,7 +91,7 @@ ICS;
         $this->assertEquals(7, count($result));
 
         $utc = new DateTimeZone('UTC');
-        $expected = array(
+        $expected = [
             new DateTimeImmutable("2015-10-28T11:45", $utc),
             new DateTimeImmutable("2015-11-11T11:45", $utc),
             new DateTimeImmutable("2015-11-25T11:45", $utc),
@@ -99,9 +99,9 @@ ICS;
             new DateTimeImmutable("2016-01-13T11:45", $utc),
             new DateTimeImmutable("2016-01-20T11:45", $utc),
             new DateTimeImmutable("2016-01-27T11:45", $utc),
-        );
+        ];
 
-        $result = array_map(function($ev){return $ev->dtstart->getDateTime();}, $result);
+        $result = array_map(function($ev) {return $ev->dtstart->getDateTime();}, $result);
 
         $this->assertEquals($expected, $result);
 
@@ -157,7 +157,7 @@ ICS;
         $this->assertEquals(7, count($result));
 
         $utc = new DateTimeZone('UTC');
-        $expected = array(
+        $expected = [
             new DateTimeImmutable("2015-10-28T11:45", $utc),
             new DateTimeImmutable("2015-11-11T11:45", $utc),
             new DateTimeImmutable("2015-11-25T11:45", $utc),
@@ -165,10 +165,10 @@ ICS;
             new DateTimeImmutable("2016-01-13T11:45", $utc),
             new DateTimeImmutable("2016-01-20T11:45", $utc),
             new DateTimeImmutable("2016-01-27T11:45", $utc),
-        );
+        ];
 
 
-        $result = array_map(function($ev){return $ev->dtstart->getDateTime();}, $result);
+        $result = array_map(function($ev) {return $ev->dtstart->getDateTime();}, $result);
 
         $this->assertEquals($expected, $result);
 
